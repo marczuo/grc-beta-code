@@ -5,3 +5,5 @@ This is an addition to the m17n input method engine for typing ancient (polytoni
 code](https://en.wikipedia.org/wiki/Beta_Code) representation.
 
 Usage: Install `ibus` and `ibus-m17n`, then copy `grc-beta-code.mim` to `/usr/share/m17n`.
+
+Arch users: Install the AUR package `ibus-grc-beta-code-git`.
