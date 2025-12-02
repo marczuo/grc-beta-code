@@ -19,12 +19,6 @@ Diacrytics must be written **after** vowels according the following order:
 Unicode offers precomposed vowel plus macron and breve
 combinations for the plain vowels α, ι, and υ (ᾱ, ῑ, ῡ) but makes no provision for such vowels with breathings and/or accents. I added here these glyphs with vowel lenght and other diacritics, but in this case it will be necessary to use combining diacritics: not all the fonts are designed for this and not all word processors or page composition apps support combining marks, so be careful!
 
-This layout provide also two additional keys:
-
-- | written *before* the correspondig letter produces arcaic greek characters;
-
-- \\ written *before* a key produces the normal key of keyboard in use.
-
 ### Combining diacritics and Punctuation
 | mark              |  key  |
 |:------------------|:-----:|
