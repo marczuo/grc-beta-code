@@ -70,7 +70,7 @@ combinations for the plain vowels α, ι, and υ (ᾱ, ῑ, ῡ) but makes no pr
 |omega (ω)   |   W      |     w   |
 
 ### Archaic letters
-They can be inserted writing a `|` **before** the corresponding character.
+Archaic letters can be written by typing `|` **before** the corresponding letter.
 
 |character        |  capital |  small  |
 |:--------------- |:--------:|:-------:|
