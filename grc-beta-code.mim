@@ -1,8 +1,35 @@
 ;; grc-beta-code.mim -- Beta Code input method for classical Greek
 
-(input-method grc beta-code)
+(input-method grc beta-code "grc-beta-code.mim")
 
 (description "Beta Code input method for classical Greek.
+See https://en.wikipedia.org/wiki/Beta_Code
+
+Forked and modified with some additions from 
+https://github.com/marczuo/grc-beta-code
+
+----------------------------
+mark                  key
+----------------------------
+iota subscript         |
+rough breath           (
+smooth breath          )
+acute                  /
+grave                  \\
+circumflex             =
+diaresis               +
+macron                 &
+breve                  '
+middle dot (·)         :
+semicolon (;)          ;
+colon (:)              \\:
+keraia (ʹ)             #
+ar. keraia (͵)         €
+left parenth.          ((
+right parenth          ))
+left doub. ang. («)    |\\
+right doub. ang. (»)   ||
+----------------------------
 
 -------------------------------------
 character     capital         small
@@ -33,45 +60,41 @@ chi             X               x
 psi             Y               y
 omega           W               w
 -------------------------------------
-sampi                           !
-digamma         V               v 
-stigma                          $
-koppa           &               %
+digamma         V               v
+koppa arc.      |P              |p
+koppa mod.      |K              |k
+stigma          |J              |j
+sampi           |S              |s
+kappa symbol    |x
+rho symbol      |r
+lunate sigma    |c
 -------------------------------------
-
-------------------------
-mark            key
-------------------------
-iota subscript  |
-rough breath    (
-smooth breath   )
-acute           /
-grave           \\
-circumflex      =
-diaresis        +
-colon           :
-question mark   ;
-------------------------
 ")
 
 (title "Ὢ")
 
 (map
  (map
-  ("!" ?ϡ)				; sampi
-  ("$" ?ϛ)				; stigma
-  ("%" ?ϙ)				; archaic koppa
-  ("&" ?Ϙ)				; archaic KOPPA
-  ("(" ?῾)                              ; rough breathing
-  (")" ?᾿)                              ; smooth breathing
-  ("'" ?’)                              ; apostrophe
-  ("#" ?ʹ)                              ; keraia
-  ("/" ?´)				; acute
-  ("\\" ?`)				; grave
-  ("=" ?῀)				; circumflex
-  ("+" ?¨)				; diaresis
-  (":" ?·)				; colon
-  (";" ?;)				; erotimatiko
+  ("(" ?῾)      ; rough breathing
+  (")" ?᾿)      ; smooth breathing
+  ("'" ?’)      ; apostrophe
+  ("/" ?´)	; acute
+  ("\\" ?`)	; grave
+  ("=" ?῀)	; circumflex
+  ("+" ?¨)	; diaresis
+  (":" ?·)	; colon
+  (";" ?;)	; erotimatiko
+
+  ("'" ?’)	; apostrophe
+  ("," ?,)	; U+002C COMMA
+  ("." ?.)	; U+002E FULL STOP
+  (";" ?;)	; erotimatiko (semicolon)
+  (":" ?·)	; U+00B7 MIDDLE DOT Colon (Ano Stigme)
+  ("((" ?\()	; U+0028 LEFT PARENTHESIS
+  ("))" ?\))	; U+0029 RIGHT PARENTHESIS
+  ("#" ?ʹ)	; U+0374 GREEK NUMERAL SIGN (DEXIA KERAIA)
+  ("¢" ?͵)	; U+0375 GREEK LOWER NUMERAL SIGN (ARISTERI KERAIA)
+  ("\\:" ?:)	; U+003A Colon
 
   ("A" ?Α)
   ("B" ?Β)
@@ -131,6 +154,17 @@ question mark   ;
   ("s." (insert "ς."))
   ("s:" (insert "ς·"))
   ("s;" (insert "ς;"))
+  ("s)" (insert "ς)"))
+
+  ("|P" ?Ϙ) ("|p" ?ϙ)
+  ("|J" ?Ϛ) ("|j" ?ϛ)
+  ("|K" ?Ϟ) ("|k" ?ϟ)
+  ("|S" ?Ϡ) ("|s" ?ϡ)
+  ("|x" ?ϰ)
+  ("|r" ?ϱ)
+  ("|c" ?ϲ)
+
+  ("|\\" ?«) ("||" ?»)
 
   ("i(" ?ἱ)
   ("i)" ?ἰ)
@@ -147,6 +181,10 @@ question mark   ;
   ("i+/" ?ΐ) ("i/+" ?ΐ)
   ("i+\\" ?ῒ) ("i\\+" ?ῒ)
   ("i&" ?ῑ) ("i'" ?ῐ)
+  ("i&)" (insert "ῑ̓")) ("i&)/" (insert "ῑ̓́")) ("i&)\\" (insert "ῑ̓̀"))
+  ("i&(" (insert "ῑ̔")) ("i&(/" (insert "ῑ̔́")) ("i&(\\" (insert "ῑ̔̀"))
+  ("i')" (insert "ῐ̓")) ("i')/" (insert "ῐ̓́")) ("i')\\" (insert "ῐ̓̀"))
+  ("i'(" (insert "ῐ̔")) ("i'(/" (insert "ῐ̔́")) ("i'(\\" (insert "ῐ̔̀"))
 
   ("I(" ?Ἱ)
   ("I)" ?Ἰ)
@@ -193,6 +231,11 @@ question mark   ;
   ("a="  ?ᾶ)
   ("a=("  ?ἇ) ("a(="  ?ἇ)
   ("a=)"  ?ἆ) ("a)="  ?ἆ)
+  ("a&" ?ᾱ) ("a'" ?ᾰ)
+  ("a&)" (insert "ᾱ̓")) ("a&)/" (insert "ᾱ̓́")) ("a&)\\" (insert "ᾱ̓̀"))
+  ("a&(" (insert "ᾱ̔")) ("a&(/" (insert "ᾱ̔́")) ("a&(\\" (insert "ᾱ̔̀"))
+  ("a')" (insert "ᾰ̓")) ("a')/" (insert "ᾰ̓́")) ("a')\\" (insert "ᾰ̓̀"))
+  ("a'(" (insert "ᾰ̔")) ("a'(/" (insert "ᾰ̔́")) ("a'(\\" (insert "ᾰ̔̀"))
 
   ("A(" ?Ἁ)
   ("A)" ?Ἀ)
@@ -316,6 +359,11 @@ question mark   ;
   ("u\"" ?ϋ)
   ("u\"/" ?ΰ) ("u/\"" ?ΰ)
   ("u\"?" ?ῢ) ("u?\"" ?ῢ)
+  ("u&" ?ῡ) ("u'" ?ῠ)
+  ("u&)" (insert "ῡ̓")) ("u&)/" (insert "ῡ̓́")) ("u&)\\" (insert "ῡ̓̀"))
+  ("u&(" (insert "ῡ̔")) ("u&(/" (insert "ῡ̔́")) ("u&(\\" (insert "ῡ̔̀"))
+  ("u')" (insert "ῠ̓")) ("u')/" (insert "ῠ̓́")) ("u')\\" (insert "ῠ̓̀"))
+  ("u'(" (insert "ῠ̔")) ("u'(/" (insert "ῠ̔́")) ("u'(\\" (insert "ῠ̔̀"))
 
   ("U(" ?Ὑ)
   ("U)" ?Ύ)
