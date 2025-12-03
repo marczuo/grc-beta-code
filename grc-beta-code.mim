@@ -23,8 +23,8 @@ breve                  '
 middle dot (·)         :
 semicolon (;)          ;
 colon (:)              \\:
-keraia (ʹ)            AltGr+n
-ar. keraia (͵)        AltGr+N
+keraia (ʹ)             \\/
+ar. keraia (͵)         \\\\
 left parenth.          ((
 right parenth          ))
 left sing. quot. (‘)  AltGr+V
@@ -97,6 +97,8 @@ lunate sigma   |c
   ("((" ?\()	; U+0028 LEFT PARENTHESIS
   ("))" ?\))	; U+0029 RIGHT PARENTHESIS
   ("\\:" ?:)	; U+003A Colon
+  ("\\/" ?ʹ)	; U+0374 GREEK NUMERAL SIGN (DEXIA KERAIA)
+  ("\\\\" ?͵)	; U+0375 GREEK LOWER NUMERAL SIGN (ARISTERI KERAIA)
 
   ("A" ?Α)
   ("B" ?Β)
