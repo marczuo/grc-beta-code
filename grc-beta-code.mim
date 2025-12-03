@@ -8,9 +8,9 @@ See https://en.wikipedia.org/wiki/Beta_Code
 Forked and modified with some additions from 
 https://github.com/marczuo/grc-beta-code
 
-----------------------------
-mark                  key
-----------------------------
+----------------------------------------
+mark                  key	keyalt
+----------------------------------------
 iota subscript         |
 rough breath           (
 smooth breath          )
@@ -23,17 +23,21 @@ breve                  '
 middle dot (·)         :
 semicolon (;)          ;
 colon (:)              \\:
-keraia (ʹ)             #
-ar. keraia (͵)         €
+keraia (ʹ)            AltGr+n
+ar. keraia (͵)        AltGr+N
 left parenth.          ((
 right parenth          ))
-left doub. ang. («)    |\\
-right doub. ang. (»)   ||
-----------------------------
+left sing. quot. (‘)  AltGr+V
+right sing. quot. (’) AltGr+B
+left doub. quot. (“)  AltGr+v
+right doub. quot. (”) AltGr+b
+left doub. ang. («)    |\\	AltGr+<
+right doub. ang. (»)   ||	AltGr+>
+----------------------------------------
 
--------------------------------------
+----------------------------------------
 character     capital         small
--------------------------------------
+----------------------------------------
 alpha           A               a
 beta            B               b
 gamma           G               g
@@ -59,16 +63,16 @@ phi             F               f
 chi             X               x
 psi             Y               y
 omega           W               w
--------------------------------------
+----------------------------------------
 digamma         V               v
-koppa arc.      |P              |p
-koppa mod.      |K              |k
-stigma          |J              |j
-sampi           |S              |s
-kappa symbol    |x
-rho symbol      |r
-lunate sigma    |c
--------------------------------------
+koppa arc.     |P              |p
+koppa mod.     |K              |k
+stigma         |J              |j
+sampi          |S              |s
+kappa symbol   |x
+rho symbol     |r
+lunate sigma   |c
+----------------------------------------
 ")
 
 (title "Ὢ")
@@ -92,8 +96,6 @@ lunate sigma    |c
   (":" ?·)	; U+00B7 MIDDLE DOT Colon (Ano Stigme)
   ("((" ?\()	; U+0028 LEFT PARENTHESIS
   ("))" ?\))	; U+0029 RIGHT PARENTHESIS
-  ("#" ?ʹ)	; U+0374 GREEK NUMERAL SIGN (DEXIA KERAIA)
-  ("¢" ?͵)	; U+0375 GREEK LOWER NUMERAL SIGN (ARISTERI KERAIA)
   ("\\:" ?:)	; U+003A Colon
 
   ("A" ?Α)
