@@ -32,9 +32,9 @@ combinations for the plain vowels α, ι, and υ (ᾱ, ῑ, ῡ) but makes no pr
 | breve                 |   '     |         |
 | middle dot (·)        |   :     |         |
 | question mark         |   ;     |         |
-| colon (:)             |  \\:    |         |
+| colon (:)             |  \\ :   |         |
 | keraia (ʹ)            |  \\ /   |         |
-| arist. keraia (͵)     |  \\\\   |         |
+| arist. keraia (͵)     |  \\ \\  |         |
 | left parenthesis      |   ((    |         |
 | right parenthesis     |   ))    |         |
 | left sing. quot. (‘)  | AltGr+V |         |
