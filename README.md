@@ -10,9 +10,7 @@ Install `ibus` and `ibus-m17n`, then copy `grc-beta-code.mim` to `/usr/share/m17
 
     sudo cp /path-to-file/grc-beta-code.mim /usr/share/m17n/
 
-and reboot.
-
-Add the keyboard via the GUI of the O. S.
+After reboot, add the keyboard via the GUI of your O. S.
 
 ***
 ## Usage
