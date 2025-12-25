@@ -6,7 +6,11 @@ code](https://en.wikipedia.org/wiki/Beta_Code) representation.
 
 ## Installation
 
-Install `ibus` and `ibus-m17n`, then copy `grc-beta-code.mim` to `/usr/share/m17n`.
+Install `ibus` and `ibus-m17n`, then copy `grc-beta-code.mim` to `/usr/share/m17n/` with
+
+    sudo cp /path-to-file/grc-beta-code.mim /usr/share/m17n/
+
+and reboot.
 
 Add the keyboard via the GUI of the O. S.
 
